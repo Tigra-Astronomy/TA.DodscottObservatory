@@ -3,23 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28218.60
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.DodscottObservatory.DeviceLayer", "TA.DodscottObservatory.DeviceLayer\TA.DodscottObservatory.DeviceLayer.csproj", "{6ABF0B4F-82FA-4980-8B7C-6D9F64C269F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.DodscottObservatory.Specifications", "TA.DodscottObservatory.Specifications\TA.DodscottObservatory.Specifications.csproj", "{CC6EDF35-C7A8-40F4-9FA0-4056FAA2CCC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.DodscottObservatory.DeviceLayer", "TA.DodscottObservatory.DeviceLayer\TA.DodscottObservatory.DeviceLayer.csproj", "{DB3D3B53-F475-4D47-AD2C-D1BB90E782B9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TA.DodscottObservatory.SharedCode", "TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.shproj", "{4055D462-5AED-40A5-94C2-967752DBD753}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.projitems*{4055d462-5aed-40a5-94c2-967752dbd753}*SharedItemsImports = 13
+		TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.projitems*{cc6edf35-c7a8-40f4-9fa0-4056faa2ccc4}*SharedItemsImports = 4
+		TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.projitems*{db3d3b53-f475-4d47-ad2c-d1bb90e782b9}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6ABF0B4F-82FA-4980-8B7C-6D9F64C269F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6ABF0B4F-82FA-4980-8B7C-6D9F64C269F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6ABF0B4F-82FA-4980-8B7C-6D9F64C269F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6ABF0B4F-82FA-4980-8B7C-6D9F64C269F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6EDF35-C7A8-40F4-9FA0-4056FAA2CCC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6EDF35-C7A8-40F4-9FA0-4056FAA2CCC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6EDF35-C7A8-40F4-9FA0-4056FAA2CCC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6EDF35-C7A8-40F4-9FA0-4056FAA2CCC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB3D3B53-F475-4D47-AD2C-D1BB90E782B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3D3B53-F475-4D47-AD2C-D1BB90E782B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3D3B53-F475-4D47-AD2C-D1BB90E782B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3D3B53-F475-4D47-AD2C-D1BB90E782B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C90FE47B-A601-416A-ADB4-0A51E8FCC3F8}
 	EndGlobalSection
 EndGlobal
