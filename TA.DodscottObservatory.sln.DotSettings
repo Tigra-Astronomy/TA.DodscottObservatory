@@ -3,4 +3,10 @@
 &#xD;
 Copyright © 2019-$CURRENT_YEAR$ Tigra Astronomy, all rights reserved.&#xD;
 &#xD;
-File: $FILENAME$  Last modified: $CURRENT_YEAR$-$CURRENT_MONTH$-$CURRENT_DAY$@$CURRENT_TIME$ by $USER_NAME$</s:String></wpf:ResourceDictionary>
+File: $FILENAME$  Last modified: $CURRENT_YEAR$-$CURRENT_MONTH$-$CURRENT_DAY$@$CURRENT_TIME$ by $USER_NAME$</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=D6E28C820F1008499B1CA50907EBBC1A/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=D6E28C820F1008499B1CA50907EBBC1A/AbsolutePath/@EntryValue">C:\Users\Tim\source\repos\TA.DodscottObservatory\TA.DodscottObservatory.Specifications\TA.DodscottObservatory.Specifications.csproj.DotSettings</s:String>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=D6E28C820F1008499B1CA50907EBBC1A/RelativePath/@EntryValue">..\TA.DodscottObservatory.Specifications\TA.DodscottObservatory.Specifications.csproj.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileD6E28C820F1008499B1CA50907EBBC1A/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileD6E28C820F1008499B1CA50907EBBC1A/IsOn/@EntryValue">False</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileD6E28C820F1008499B1CA50907EBBC1A/RelativePriority/@EntryValue">1</s:Double></wpf:ResourceDictionary>

@@ -19,6 +19,7 @@ namespace TA.DodscottObservatory.DeviceLayer {
             }
 
         /// <inheritdoc />
-        public override void ObserveResponse(IObservable<char> source) { }
+        /// <inheritdoc />
+        public override void ObserveResponse(IObservable<char> source) {  }
         }
     }
