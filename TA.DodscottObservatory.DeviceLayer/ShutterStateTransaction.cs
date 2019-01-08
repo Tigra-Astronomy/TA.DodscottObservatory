@@ -18,13 +18,13 @@ namespace TA.DodscottObservatory.DeviceLayer {
         /// <inheritdoc />
         public override void ObserveResponse(IObservable<char> source)
             {
-            var terminatedStrings = source.DelimitedMessageStrings('~', '#');
-            var shutterStateResponses =
-                terminatedStrings.Where(response => shutterStateResponseRegex.IsMatch(response));
-            var sequence = shutterStateResponses
+            var shutterStateResponses = from response in source.DelimitedMessageStrings('~', '#')
+                                        where shutterStateResponseRegex.IsMatch(response)
+                                        select response;
+            shutterStateResponses
                 .Trace("Shutter State Response")
-                .Take(1);
-            sequence.Subscribe(OnNext, OnError, OnCompleted);
+                .Take(1)
+                .Subscribe(OnNext, OnError, OnCompleted);
             }
 
         /// <inheritdoc />
