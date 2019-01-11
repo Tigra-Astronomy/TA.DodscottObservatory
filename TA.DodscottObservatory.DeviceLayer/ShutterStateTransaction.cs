@@ -8,7 +8,7 @@ using TA.Ascom.ReactiveCommunications.Diagnostics;
 namespace TA.DodscottObservatory.DeviceLayer {
     internal class ShutterStateTransaction : TransactionBase
         {
-        const string shutterStateResponsePattern = @"~ss(?<State>\d)#";
+        const string shutterStateResponsePattern = @"~ss(?<State>[0-4])#";
         private static Regex shutterStateResponseRegex = new Regex(shutterStateResponsePattern,
             RegexOptions.Compiled | RegexOptions.CultureInvariant | RegexOptions.ExplicitCapture |
             RegexOptions.Singleline);
@@ -40,6 +40,13 @@ namespace TA.DodscottObservatory.DeviceLayer {
             base.OnCompleted();
             }
 
-        public ShutterState Value { get; private set; }
+        /// <inheritdoc />
+        protected override void OnError(Exception except)
+            {
+            Value = ShutterState.IsShutterError;
+            base.OnError(except);
+            }
+
+        public ShutterState Value { get; private set; } = ShutterState.IsShutterError;
         }
     }

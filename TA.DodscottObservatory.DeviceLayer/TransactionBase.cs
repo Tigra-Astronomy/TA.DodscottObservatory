@@ -5,7 +5,10 @@ using TA.Ascom.ReactiveCommunications;
 namespace TA.DodscottObservatory.DeviceLayer {
     internal class TransactionBase : DeviceTransaction {
         /// <inheritdoc />
-        public TransactionBase(string command) : base(AddEncapsulation(command)) { }
+        public TransactionBase(string command) : base(AddEncapsulation(command))
+            {
+            Timeout=TimeSpan.FromSeconds(2);
+            }
 
         private static string AddEncapsulation(string command)
             {

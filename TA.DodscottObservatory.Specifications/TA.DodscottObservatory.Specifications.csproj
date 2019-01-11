@@ -61,6 +61,7 @@
     <Compile Include="Fakes\TransactionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transactions\BaseTransactionSpecs.cs" />
+    <Compile Include="Transactions\DomesStateTransactionSpecs.cs" />
     <Compile Include="Transactions\ShutterStateTransactionSpecs.cs" />
   </ItemGroup>
   <ItemGroup>

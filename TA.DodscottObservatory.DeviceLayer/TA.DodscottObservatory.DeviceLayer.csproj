@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="DomeState.cs" />
+    <Compile Include="DomeStateTransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShutterState.cs" />
     <Compile Include="ShutterStateTransaction.cs" />
