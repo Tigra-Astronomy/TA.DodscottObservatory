@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>CS0169</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -54,12 +55,14 @@
     <Compile Include="Contexts\DeviceControllerContext.cs" />
     <Compile Include="Contexts\DeviceControllerContextBuilder.cs" />
     <Compile Include="Contexts\with_fake_comms_stack.cs" />
+    <Compile Include="Actions\ControllerActionsSpecs.cs" />
     <Compile Include="Fakes\FakeCommunicationChannel.cs" />
     <Compile Include="Fakes\FakeEndpoint.cs" />
     <Compile Include="Fakes\FakeTransactionProcessor.cs" />
     <Compile Include="Fakes\TestableDeviceTransaction.cs" />
     <Compile Include="Fakes\TransactionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHelpers\ShouldExtensions.cs" />
     <Compile Include="Transactions\BaseTransactionSpecs.cs" />
     <Compile Include="Transactions\DomesStateTransactionSpecs.cs" />
     <Compile Include="Transactions\ShutterStateTransactionSpecs.cs" />

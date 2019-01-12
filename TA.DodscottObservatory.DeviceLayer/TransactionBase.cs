@@ -10,7 +10,7 @@ namespace TA.DodscottObservatory.DeviceLayer {
             Timeout=TimeSpan.FromSeconds(2);
             }
 
-        private static string AddEncapsulation(string command)
+        internal static string AddEncapsulation(string command)
             {
             var builder = new StringBuilder();
             if (!command.StartsWith(Constants.EncapsulationHeader))

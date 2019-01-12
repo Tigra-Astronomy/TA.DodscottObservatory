@@ -6,7 +6,7 @@
 
 namespace TA.DodscottObservatory.DeviceLayer
     {
-    internal enum DomeState
+    public enum DomeState
         {
         IsDomeError,
         IsAtPark,

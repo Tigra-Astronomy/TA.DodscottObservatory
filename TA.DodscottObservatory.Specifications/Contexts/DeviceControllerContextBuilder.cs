@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using TA.Ascom.ReactiveCommunications;
+using TA.DodscottObservatory.DeviceLayer;
 using TA.DodscottObservatory.Specifications.Fakes;
 
 namespace TA.DodscottObservatory.Specifications.Contexts
@@ -31,7 +32,9 @@ namespace TA.DodscottObservatory.Specifications.Contexts
         var observer = new TransactionObserver(channel);
         var processor = new ReactiveTransactionProcessor();
         processor.SubscribeTransactionObserver(observer);
+        context.Channel = channel;
         context.TransactionProcessor = processor;
+        context.Actions = new ControllerActions(processor);
         return context;
         }
 
