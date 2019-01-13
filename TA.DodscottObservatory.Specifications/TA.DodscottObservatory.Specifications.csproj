@@ -84,6 +84,9 @@
       <Name>TA.DodscottObservatory.DeviceLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Architecture Overview.dgml" />
+  </ItemGroup>
   <Import Project="..\TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
