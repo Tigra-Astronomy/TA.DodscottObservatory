@@ -20,6 +20,9 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
 
         public void OnExit() { }
 
+        /// <inheritdoc />
+        public void OpenShutter() => throw uninitialized;
+
         public string Name => nameof(Uninitialized);
         }
     }

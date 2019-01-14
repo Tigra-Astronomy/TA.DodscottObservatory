@@ -22,5 +22,7 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
         ///     <see cref="OnEnter" /> method is called.
         /// </summary>
         void OnExit();
+
+        void OpenShutter();
         }
     }

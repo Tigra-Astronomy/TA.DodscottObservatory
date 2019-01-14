@@ -33,6 +33,9 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
             timeoutCancellation?.Cancel();
             }
 
+        /// <inheritdoc />
+        public virtual void OpenShutter() { }
+
         #region Timeout Processing
         protected void ResetTimeout(TimeSpan timeout)
             {
