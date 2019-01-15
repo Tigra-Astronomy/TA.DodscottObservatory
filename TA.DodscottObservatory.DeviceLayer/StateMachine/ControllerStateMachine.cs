@@ -2,7 +2,7 @@
 // 
 // Copyright © 2019-2019 Tigra Astronomy, all rights reserved.
 // 
-// File: ControllerStateMachine.cs  Last modified: 2019-01-13@20:27 by Tim Long
+// File: ControllerStateMachine.cs  Last modified: 2019-01-15@05:45 by Tim Long
 
 using System;
 using System.Threading;
@@ -11,20 +11,25 @@ using NLog.Fluent;
 
 namespace TA.DodscottObservatory.DeviceLayer.StateMachine
     {
-    public class ControllerStateMachine
+    public class ControllerStateMachine : IControllerStateTriggers
         {
         internal readonly ManualResetEvent InReadyState = new ManualResetEvent(false);
         [CanBeNull] internal CancellationTokenSource KeepAliveCancellationSource;
 
-        public ControllerStateMachine(ControllerActions controllerActions)
+        public ControllerStateMachine(IControllerActions controllerActions)
             {
             ControllerActions = controllerActions;
             CurrentState = new Uninitialized();
             }
 
-        internal ControllerActions ControllerActions { get; }
+        internal IControllerActions ControllerActions { get; }
 
         internal IControllerState CurrentState { get; private set; }
+
+        #region State Triggers (IControllerStateTriggers)
+        /// <inheritdoc />
+        public void OpenShutter() => CurrentState.OpenShutter();
+        #endregion
 
         /// <summary>
         ///     Initializes the state machine and optionally sets the starting state.

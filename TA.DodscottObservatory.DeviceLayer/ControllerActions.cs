@@ -9,7 +9,7 @@ using static TA.DodscottObservatory.DeviceLayer.Constants;
 
 namespace TA.DodscottObservatory.DeviceLayer
     {
-    public class ControllerActions
+    public class ControllerActions : IControllerActions
         {
         private readonly ITransactionProcessor processor;
 

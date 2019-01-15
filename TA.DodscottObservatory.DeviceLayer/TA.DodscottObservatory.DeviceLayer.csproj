@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="ControllerActions.cs" />
+    <Compile Include="IControllerActions.cs" />
     <Compile Include="StateMachine\ControllerStateBase.cs" />
     <Compile Include="StateMachine\ControllerStateMachine.cs" />
     <Compile Include="Diagnostics.cs" />
@@ -63,6 +64,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShutterState.cs" />
     <Compile Include="ShutterStateTransaction.cs" />
+    <Compile Include="StateMachine\IControllerStatePlumbing.cs" />
+    <Compile Include="StateMachine\IControllerStateTriggers.cs" />
     <Compile Include="StateMachine\ReadyState.cs" />
     <Compile Include="TransactionBase.cs" />
     <Compile Include="StateMachine\Uninitialized.cs" />

@@ -12,7 +12,7 @@ using NLog.Fluent;
 
 namespace TA.DodscottObservatory.DeviceLayer.StateMachine
     {
-    internal abstract class ControllerStateBase : IControllerState
+    internal abstract class ControllerStateBase : IControllerState, IControllerStateTriggers
         {
         protected readonly ControllerStateMachine machine;
 
