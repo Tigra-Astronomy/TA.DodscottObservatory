@@ -16,7 +16,7 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
         {
         protected readonly ControllerStateMachine machine;
 
-        private CancellationTokenSource timeoutCancellation;
+        protected CancellationTokenSource timeoutCancellation;
 
         protected ControllerStateBase(ControllerStateMachine machine)
             {

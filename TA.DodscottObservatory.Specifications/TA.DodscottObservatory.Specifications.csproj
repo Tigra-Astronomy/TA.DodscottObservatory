@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Contexts\DeviceControllerContext.cs" />
     <Compile Include="Contexts\DeviceControllerContextBuilder.cs" />
+    <Compile Include="Contexts\LogSetup.cs" />
     <Compile Include="Contexts\StateMachineContext.cs" />
     <Compile Include="Contexts\StateMachineContextBuilder.cs" />
     <Compile Include="Contexts\with_fake_comms_stack.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Fakes\TestableDeviceTransaction.cs" />
     <Compile Include="Fakes\TransactionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateMachine\ShutterMotionMonitorSpecs.cs" />
     <Compile Include="StateMachine\StateMachineSpecs.cs" />
     <Compile Include="TestHelpers\ShouldExtensions.cs" />
     <Compile Include="Transactions\BaseTransactionSpecs.cs" />

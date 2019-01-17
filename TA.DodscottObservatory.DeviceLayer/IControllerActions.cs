@@ -7,5 +7,9 @@
         ShutterState OpenShutter();
 
         ShutterState CloseShutter();
+
+        ShutterState QueryShutterState();
+
+        double QueryShutterPosition();
         }
     }

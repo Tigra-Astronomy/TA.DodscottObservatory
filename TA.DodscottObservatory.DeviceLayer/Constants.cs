@@ -7,5 +7,6 @@
         public const string CmdCloseShutter = "smC";
         public const string EncapsulationFooter = "#";
         public const string EncapsulationHeader = "~";
+        public const string CmdGetShutterPosition = "sg%";
         }
     }

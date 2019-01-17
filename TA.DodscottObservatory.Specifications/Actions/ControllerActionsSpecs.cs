@@ -47,4 +47,24 @@ namespace TA.DodscottObservatory.Specifications.Actions
         It should_return_shutter_closing_status = () =>  state.ShouldEqual(ShutterState.IsClosing);
         static ShutterState state;
     }
+    internal class when_invoking_the_query_shutter_state_action : with_fake_comms_stack
+        {
+        Establish context = () => Context = ContextBuilder
+            .WithFakeResponse("~ss3#")
+            .Build();
+        Because of = () => state = Actions.QueryShutterState();
+        It should_send_the_query_shutter_state_command = () => FakeChannel.ShouldHaveSent(CmdGetShutterState);
+        It should_return_shutter_closing_status = () =>  state.ShouldEqual(ShutterState.IsClosing);
+        static ShutterState state;
+    }
+    internal class when_invoking_the_query_shutter_position_action : with_fake_comms_stack
+        {
+        Establish context = () => Context = ContextBuilder
+            .WithFakeResponse("~s%10.5#")
+            .Build();
+        Because of = () => position = Actions.QueryShutterPosition();
+        It should_send_the_query_shutter_state_command = () => FakeChannel.ShouldHaveSent(CmdGetShutterPosition);
+        It should_return_the_percent_open = () =>  position.ShouldEqual(10.5);
+        static double position;
+    }
 }

@@ -6,5 +6,7 @@ namespace TA.DodscottObservatory.Specifications.Contexts {
         {
         public IControllerActions Actions { get; set; }
         public ControllerStateMachine Machine { get; set; }
+
+        public HardwareStatus HardwareStatus { get; set; }
         }
     }

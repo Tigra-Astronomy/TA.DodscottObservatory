@@ -16,8 +16,9 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
         internal readonly ManualResetEvent InReadyState = new ManualResetEvent(false);
         [CanBeNull] internal CancellationTokenSource KeepAliveCancellationSource;
 
-        public ControllerStateMachine(IControllerActions controllerActions)
+        public ControllerStateMachine(IControllerActions controllerActions, HardwareStatus status)
             {
+            HardwareStatus = status;
             ControllerActions = controllerActions;
             CurrentState = new Uninitialized();
             }
@@ -25,6 +26,8 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
         internal IControllerActions ControllerActions { get; }
 
         internal IControllerState CurrentState { get; private set; }
+
+        public HardwareStatus HardwareStatus { get;  }
 
         #region State Triggers (IControllerStateTriggers)
         /// <inheritdoc />

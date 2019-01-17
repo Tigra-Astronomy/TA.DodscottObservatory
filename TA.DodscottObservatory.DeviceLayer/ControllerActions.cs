@@ -49,5 +49,23 @@ namespace TA.DodscottObservatory.DeviceLayer
             transaction.WaitForCompletionOrTimeout();
             return transaction.Value;
             }
+
+        /// <inheritdoc />
+        public ShutterState QueryShutterState()
+            {
+            var transaction = new ShutterStateTransaction(CmdGetShutterState);
+            processor.CommitTransaction(transaction);
+            transaction.WaitForCompletionOrTimeout();
+            return transaction.Value;
+            }
+
+        /// <inheritdoc />
+        public double QueryShutterPosition()
+            {
+            var transaction = new ShutterPositionTransaction(Constants.CmdGetShutterPosition);
+            processor.CommitTransaction(transaction);
+            transaction.WaitForCompletionOrTimeout();
+            return transaction.Value;
+            }
     }
     }

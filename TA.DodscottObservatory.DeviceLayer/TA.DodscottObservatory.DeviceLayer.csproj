@@ -54,7 +54,9 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="ControllerActions.cs" />
+    <Compile Include="HardwareStatus.cs" />
     <Compile Include="IControllerActions.cs" />
+    <Compile Include="ShutterPositionTransaction.cs" />
     <Compile Include="StateMachine\ControllerStateBase.cs" />
     <Compile Include="StateMachine\ControllerStateMachine.cs" />
     <Compile Include="Diagnostics.cs" />
@@ -67,10 +69,14 @@
     <Compile Include="StateMachine\IControllerStatePlumbing.cs" />
     <Compile Include="StateMachine\IControllerStateTriggers.cs" />
     <Compile Include="StateMachine\ReadyState.cs" />
+    <Compile Include="StateMachine\ShutterMovingState.cs" />
     <Compile Include="TransactionBase.cs" />
     <Compile Include="StateMachine\Uninitialized.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="PostSharp.Patterns.Model">
+      <Version>6.0.33</Version>
+    </PackageReference>
     <PackageReference Include="TA.Ascom.ReactiveCommunications">
       <Version>1.2.2</Version>
     </PackageReference>

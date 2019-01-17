@@ -21,6 +21,8 @@ namespace TA.DodscottObservatory.Specifications.Contexts
         protected static IControllerActions Actions => Context.Actions;
 
         protected static  ControllerStateMachine Machine => Context.Machine;
+
+        public static HardwareStatus HardwareStatus => Context.HardwareStatus;
         }
     #endregion
     }

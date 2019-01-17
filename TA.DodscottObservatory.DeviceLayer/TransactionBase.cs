@@ -3,7 +3,7 @@ using System.Text;
 using TA.Ascom.ReactiveCommunications;
 
 namespace TA.DodscottObservatory.DeviceLayer {
-    internal class TransactionBase : DeviceTransaction {
+    public class TransactionBase : DeviceTransaction {
         /// <inheritdoc />
         public TransactionBase(string command) : base(AddEncapsulation(command))
             {
