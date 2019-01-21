@@ -72,6 +72,8 @@
     <Compile Include="StateMachine\ShutterMovingState.cs" />
     <Compile Include="TransactionBase.cs" />
     <Compile Include="StateMachine\Uninitialized.cs" />
+    <Compile Include="TransactionException.cs" />
+    <Compile Include="TransactionExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="PostSharp.Patterns.Model">

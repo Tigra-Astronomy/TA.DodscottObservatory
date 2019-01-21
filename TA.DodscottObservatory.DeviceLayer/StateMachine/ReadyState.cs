@@ -14,6 +14,20 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
         public ReadyState(ControllerStateMachine machine) : base(machine) { }
 
         /// <inheritdoc />
+        public override void OnEnter()
+            {
+            machine.InReadyState.Set();
+            base.OnEnter();
+            }
+
+        /// <inheritdoc />
+        public override void OnExit()
+            {
+            machine.InReadyState.Reset();
+            base.OnExit();
+            }
+
+        /// <inheritdoc />
         public override void OpenShutter()
             {
             ResetTimeout(TimeSpan.FromMinutes(5));

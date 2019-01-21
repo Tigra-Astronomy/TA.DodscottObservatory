@@ -42,7 +42,7 @@ namespace TA.DodscottObservatory.Specifications.Contexts
             var actions = A.Fake<IControllerActions>();
             if (mockShutterOpening)
                 {
-                A.CallTo(() => actions.QueryShutterState()).Returns(ShutterState.IsOpening);
+                A.CallTo(() => actions.GetShutterState()).Returns(ShutterState.IsOpening);
                 }
             return actions;
             }

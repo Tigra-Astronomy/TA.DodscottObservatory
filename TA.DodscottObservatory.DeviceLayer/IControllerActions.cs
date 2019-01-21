@@ -1,15 +1,13 @@
 ﻿namespace TA.DodscottObservatory.DeviceLayer {
     public interface IControllerActions {
-        DomeState RequestDomeStatus();
-
-        ShutterState GetShutterState();
+        DomeState GetDomeState();
 
         ShutterState OpenShutter();
 
         ShutterState CloseShutter();
 
-        ShutterState QueryShutterState();
+        ShutterState GetShutterState();
 
-        double QueryShutterPosition();
+        double GetShutterPosition();
         }
     }

@@ -18,19 +18,12 @@ namespace TA.DodscottObservatory.DeviceLayer
             this.processor = processor;
             }
 
-        public DomeState RequestDomeStatus()
+        public DomeState GetDomeState()
             {
             var transaction = new DomeStateTransaction(CmdGetDomeState);
             processor.CommitTransaction(transaction);
             transaction.WaitForCompletionOrTimeout();
-            return transaction.Value;
-            }
-
-        public ShutterState GetShutterState()
-            {
-            var transaction = new ShutterStateTransaction(CmdGetShutterState);
-            processor.CommitTransaction(transaction);
-            transaction.WaitForCompletionOrTimeout();
+            transaction.ThrowIfFailed();
             return transaction.Value;
             }
 
@@ -39,6 +32,7 @@ namespace TA.DodscottObservatory.DeviceLayer
             var transaction = new ShutterStateTransaction(CmdOpenShutter);
             processor.CommitTransaction(transaction);
             transaction.WaitForCompletionOrTimeout();
+            transaction.ThrowIfFailed();
             return transaction.Value;
             }
 
@@ -47,24 +41,27 @@ namespace TA.DodscottObservatory.DeviceLayer
             var transaction = new ShutterStateTransaction(CmdCloseShutter);
             processor.CommitTransaction(transaction);
             transaction.WaitForCompletionOrTimeout();
+            transaction.ThrowIfFailed();
             return transaction.Value;
             }
 
         /// <inheritdoc />
-        public ShutterState QueryShutterState()
+        public ShutterState GetShutterState()
             {
             var transaction = new ShutterStateTransaction(CmdGetShutterState);
             processor.CommitTransaction(transaction);
             transaction.WaitForCompletionOrTimeout();
+            transaction.ThrowIfFailed();
             return transaction.Value;
             }
 
         /// <inheritdoc />
-        public double QueryShutterPosition()
+        public double GetShutterPosition()
             {
             var transaction = new ShutterPositionTransaction(Constants.CmdGetShutterPosition);
             processor.CommitTransaction(transaction);
             transaction.WaitForCompletionOrTimeout();
+            transaction.ThrowIfFailed();
             return transaction.Value;
             }
     }
