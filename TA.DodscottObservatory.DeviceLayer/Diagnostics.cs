@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TA.Ascom.ReactiveCommunications;
+using TA.DodscottObservatory.DeviceLayer.StateMachine;
 
 namespace TA.DodscottObservatory.DeviceLayer
 {
-    public class Diagnostics
+    public static class Diagnostics
     {
-    public ITransactionProcessor InitialiseComms(string connectionString)
+    public static ITransactionProcessor InitialiseComms(string connectionString)
         {
         var factory = new ChannelFactory();
         var channel = factory.FromConnectionString(connectionString);
@@ -18,6 +19,18 @@ namespace TA.DodscottObservatory.DeviceLayer
         processor.SubscribeTransactionObserver(observer);
         channel.Open();
         return processor;
+        }
+
+    public static DeviceController CreateDeviceController(string connection)
+        {
+        var processor = InitialiseComms(connection);
+        var status = new HardwareStatus();
+        status.PropertyChanged += (sender, args) => Console.WriteLine($"{args.PropertyName} changed");
+        var actions = new ControllerActions(processor);
+        var machine = new ControllerStateMachine(actions, status);
+        machine.Initialize(new ReadyState(machine));
+        var controller = new DeviceController(machine);
+        return controller;
         }
     }
 }

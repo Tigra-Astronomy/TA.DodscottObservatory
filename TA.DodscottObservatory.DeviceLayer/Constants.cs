@@ -17,5 +17,6 @@ namespace TA.DodscottObservatory.DeviceLayer
         public const string CmdGetShutterPosition = "sg%";
         public const string CmdGetDomeAzimuth = "dgA";
         public const string CmdRotateToAzimuth = "dmP";
+        public const string CmdRotateToAzimuthFormat = "dmP{0:F3}";
         }
     }

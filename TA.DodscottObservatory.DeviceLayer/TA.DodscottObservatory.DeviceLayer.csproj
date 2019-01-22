@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="ControllerActions.cs" />
+    <Compile Include="DeviceController.cs" />
     <Compile Include="DomePositionTransaction.cs" />
     <Compile Include="HardwareStatus.cs" />
     <Compile Include="IControllerActions.cs" />

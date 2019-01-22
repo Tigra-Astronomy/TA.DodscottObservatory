@@ -78,7 +78,8 @@ namespace TA.DodscottObservatory.DeviceLayer
         /// <inheritdoc />
         public DomeState RotateToAzimuth(double targetAzimuthDegrees)
             {
-            var transaction = new DomeStateTransaction(Constants.CmdRotateToAzimuth);
+            var target = string.Format(CmdRotateToAzimuthFormat, targetAzimuthDegrees);
+            var transaction = new DomeStateTransaction(target);
             processor.CommitTransaction(transaction);
             transaction.WaitForCompletionOrTimeout();
             transaction.ThrowIfFailed();
