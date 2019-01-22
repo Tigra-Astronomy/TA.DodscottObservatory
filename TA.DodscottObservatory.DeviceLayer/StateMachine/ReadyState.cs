@@ -30,10 +30,28 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
         /// <inheritdoc />
         public override void OpenShutter()
             {
-            ResetTimeout(TimeSpan.FromMinutes(5));
             machine.ControllerActions.OpenShutter();
             machine.HardwareStatus.ShutterState = ShutterState.IsOpening;
             var nextState = new ShutterMovingState(machine);
+            machine.TransitionToState(nextState);
+            }
+
+        /// <inheritdoc />
+        public override void CloseShutter()
+            {
+            machine.ControllerActions.CloseShutter();
+            machine.HardwareStatus.ShutterState = ShutterState.IsClosing;
+            var nextState = new ShutterMovingState(machine);
+            machine.TransitionToState(nextState);
+            }
+
+        /// <inheritdoc />
+        public override void RotateToAzimuth(double targetAzimuthDegrees)
+            {
+            //ToDo - potential race condition because dome state will not be updated for a time.
+            var domeState = machine.ControllerActions.RotateToAzimuth(targetAzimuthDegrees);
+            machine.HardwareStatus.DomeState = domeState;
+            var nextState = new DomeMovingState(machine);
             machine.TransitionToState(nextState);
             }
         }

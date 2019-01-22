@@ -32,6 +32,12 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
         #region State Triggers (IControllerStateTriggers)
         /// <inheritdoc />
         public void OpenShutter() => CurrentState.OpenShutter();
+
+        /// <inheritdoc />
+        public void CloseShutter() => CurrentState.CloseShutter();
+
+        /// <inheritdoc />
+        public void RotateToAzimuth(double targetAzimuthDegrees) => CurrentState.RotateToAzimuth(targetAzimuthDegrees);
         #endregion
 
         /// <summary>

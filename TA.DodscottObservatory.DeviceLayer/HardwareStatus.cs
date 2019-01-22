@@ -19,6 +19,10 @@ namespace TA.DodscottObservatory.DeviceLayer
 
         public double ShutterPosition { get; set; }
 
+        public DomeState DomeState { get; set; }
+
+        public double DomeAzimuth { get; set; }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

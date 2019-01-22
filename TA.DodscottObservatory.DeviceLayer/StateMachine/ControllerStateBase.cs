@@ -36,6 +36,12 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
         /// <inheritdoc />
         public virtual void OpenShutter() { }
 
+        /// <inheritdoc />
+        public virtual void CloseShutter() { }
+
+        /// <inheritdoc />
+        public virtual void RotateToAzimuth(double targetAzimuthDegrees) { }
+
         #region Timeout Processing
         protected void ResetTimeout(TimeSpan timeout)
             {

@@ -9,5 +9,9 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
     public interface IControllerStateTriggers
         {
         void OpenShutter();
+
+        void CloseShutter();
+
+        void RotateToAzimuth(double targetAzimuthDegrees);
         }
     }

@@ -21,8 +21,6 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
         /// <inheritdoc />
         public override void OnEnter()
             {
-            // ToDo - kick off a task to monitor the progress
-            // ToDo - report the shutter state as "opening"
             ResetTimeout(TimeSpan.FromMinutes(5)); // ToDo: factor out into settings
             monitoringTask = StartMonitoringShutterMovement(timeoutCancellation.Token);
             base.OnEnter();

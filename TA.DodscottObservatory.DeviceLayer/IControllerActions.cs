@@ -9,5 +9,9 @@
         ShutterState GetShutterState();
 
         double GetShutterPosition();
+
+        double GetDomePosition();
+
+        DomeState RotateToAzimuth(double targetAzimuthDegrees);
         }
     }

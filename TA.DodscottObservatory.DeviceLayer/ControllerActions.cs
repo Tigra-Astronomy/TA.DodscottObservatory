@@ -64,5 +64,25 @@ namespace TA.DodscottObservatory.DeviceLayer
             transaction.ThrowIfFailed();
             return transaction.Value;
             }
-    }
+
+        /// <inheritdoc />
+        public double GetDomePosition()
+            {
+            var transaction = new DomePositionTransaction(Constants.CmdGetDomeAzimuth);
+            processor.CommitTransaction(transaction);
+            transaction.WaitForCompletionOrTimeout();
+            transaction.ThrowIfFailed();
+            return transaction.Value;
+            }
+
+        /// <inheritdoc />
+        public DomeState RotateToAzimuth(double targetAzimuthDegrees)
+            {
+            var transaction = new DomeStateTransaction(Constants.CmdRotateToAzimuth);
+            processor.CommitTransaction(transaction);
+            transaction.WaitForCompletionOrTimeout();
+            transaction.ThrowIfFailed();
+            return transaction.Value;
+            }
+        }
     }

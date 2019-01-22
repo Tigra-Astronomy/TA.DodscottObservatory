@@ -23,6 +23,12 @@ namespace TA.DodscottObservatory.DeviceLayer.StateMachine
         /// <inheritdoc />
         public void OpenShutter() => throw uninitialized;
 
+        /// <inheritdoc />
+        public void CloseShutter() => throw uninitialized;
+
+        /// <inheritdoc />
+        public void RotateToAzimuth(double targetAzimuthDegrees) => throw uninitialized;
+
         public string Name => nameof(Uninitialized);
         }
     }
