@@ -9,11 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.DodscottObservatory.Devi
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TA.DodscottObservatory.SharedCode", "TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.shproj", "{4055D462-5AED-40A5-94C2-967752DBD753}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.DodscottObservatory.Server", "TA.DodscottObservatory.Server\TA.DodscottObservatory.Server.csproj", "{FF0B89E7-3601-4B5F-B0DA-17C329D2EE2D}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.projitems*{4055d462-5aed-40a5-94c2-967752dbd753}*SharedItemsImports = 13
 		TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.projitems*{cc6edf35-c7a8-40f4-9fa0-4056faa2ccc4}*SharedItemsImports = 4
 		TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.projitems*{db3d3b53-f475-4d47-ad2c-d1bb90e782b9}*SharedItemsImports = 4
+		TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.projitems*{ff0b89e7-3601-4b5f-b0da-17c329d2ee2d}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,8 +31,15 @@ Global
 		{DB3D3B53-F475-4D47-AD2C-D1BB90E782B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB3D3B53-F475-4D47-AD2C-D1BB90E782B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB3D3B53-F475-4D47-AD2C-D1BB90E782B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF0B89E7-3601-4B5F-B0DA-17C329D2EE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF0B89E7-3601-4B5F-B0DA-17C329D2EE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF0B89E7-3601-4B5F-B0DA-17C329D2EE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF0B89E7-3601-4B5F-B0DA-17C329D2EE2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DCA17A0-42A4-40F3-9C81-B9CB54923196}
 	EndGlobalSection
 EndGlobal

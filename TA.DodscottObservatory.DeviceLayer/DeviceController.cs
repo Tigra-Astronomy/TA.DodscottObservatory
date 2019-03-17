@@ -17,6 +17,8 @@ namespace TA.DodscottObservatory.DeviceLayer
             this.machine = machine;
             }
 
+        public bool IsConnected => true;
+
         private HardwareStatus Status => machine.HardwareStatus;
 
         public ShutterState ShutterState => Status.ShutterState;
