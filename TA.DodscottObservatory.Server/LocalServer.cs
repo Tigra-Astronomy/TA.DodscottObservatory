@@ -291,7 +291,7 @@ namespace TA.DodscottObservatory.Server
         private static List<string> s_ComObjectAssys; // Dynamically loaded assemblies containing served COM objects
         private static List<Type> s_ComObjectTypes; // Served COM object types
         private static ArrayList s_ClassFactories; // Served COM object class factories
-        private static readonly string s_appId = "{0bac7ff1-ebe6-4df7-87df-d433a81d65cb}"; // Our AppId
+        private static readonly string s_appId = "{e40734b7-d79e-4c07-bf18-fe7e08d7b2ac}"; // Our AppId
         private static readonly object lockObject = new object();
         #endregion
 

@@ -11,6 +11,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TA.DodscottObservatory.Shar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.DodscottObservatory.Server", "TA.DodscottObservatory.Server\TA.DodscottObservatory.Server.csproj", "{FF0B89E7-3601-4B5F-B0DA-17C329D2EE2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.DodscottObservatory.Dome", "TA.DodscottObservatory.Dome\TA.DodscottObservatory.Dome.csproj", "{CBED2C73-B033-4B13-B526-33571FFC158B}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		TA.DodscottObservatory.SharedCode\TA.DodscottObservatory.SharedCode.projitems*{4055d462-5aed-40a5-94c2-967752dbd753}*SharedItemsImports = 13
@@ -35,6 +37,10 @@ Global
 		{FF0B89E7-3601-4B5F-B0DA-17C329D2EE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF0B89E7-3601-4B5F-B0DA-17C329D2EE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF0B89E7-3601-4B5F-B0DA-17C329D2EE2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBED2C73-B033-4B13-B526-33571FFC158B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBED2C73-B033-4B13-B526-33571FFC158B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBED2C73-B033-4B13-B526-33571FFC158B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBED2C73-B033-4B13-B526-33571FFC158B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
