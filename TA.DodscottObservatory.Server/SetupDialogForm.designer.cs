@@ -31,14 +31,10 @@ namespace TA.DodscottObservatory.Server
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ToolTip toolTip1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetupDialogForm));
-            this.communicationSettingsControl1 = new CommunicationSettingsControl();
+            this.communicationSettingsControl1 = new TA.DodscottObservatory.Server.CommunicationSettingsControl();
             this.PerformShutterRecovery = new System.Windows.Forms.CheckBox();
             this.ShutterOpenCloseTimeSeconds = new System.Windows.Forms.NumericUpDown();
             this.FullRotationTimeSeconds = new System.Windows.Forms.NumericUpDown();
-            this.PresetHD6 = new System.Windows.Forms.Button();
-            this.PresetHD10 = new System.Windows.Forms.Button();
-            this.PresetHD15 = new System.Windows.Forms.Button();
-            this.IgnoreShutterSensor = new System.Windows.Forms.CheckBox();
             this.cmdOK = new System.Windows.Forms.Button();
             this.cmdCancel = new System.Windows.Forms.Button();
             this.picASCOM = new System.Windows.Forms.PictureBox();
@@ -47,10 +43,8 @@ namespace TA.DodscottObservatory.Server
             this.CommunicationsGroup = new System.Windows.Forms.GroupBox();
             this.StartupOptionsGroup = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ShutterOpenCloseTimeSeconds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FullRotationTimeSeconds)).BeginInit();
@@ -59,7 +53,6 @@ namespace TA.DodscottObservatory.Server
             this.CommunicationsGroup.SuspendLayout();
             this.StartupOptionsGroup.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolTip1
@@ -76,7 +69,7 @@ namespace TA.DodscottObservatory.Server
             this.communicationSettingsControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.communicationSettingsControl1.Location = new System.Drawing.Point(6, 19);
             this.communicationSettingsControl1.Name = "communicationSettingsControl1";
-            this.communicationSettingsControl1.Size = new System.Drawing.Size(253, 36);
+            this.communicationSettingsControl1.Size = new System.Drawing.Size(232, 36);
             this.communicationSettingsControl1.TabIndex = 7;
             toolTip1.SetToolTip(this.communicationSettingsControl1, resources.GetString("communicationSettingsControl1.ToolTip"));
             // 
@@ -126,58 +119,11 @@ namespace TA.DodscottObservatory.Server
             toolTip1.SetToolTip(this.FullRotationTimeSeconds, resources.GetString("FullRotationTimeSeconds.ToolTip"));
             this.FullRotationTimeSeconds.Value = global::TA.DodscottObservatory.Server.Properties.Settings.Default.FullRotationTimeSeconds;
             // 
-            // PresetHD6
-            // 
-            this.PresetHD6.Location = new System.Drawing.Point(61, 71);
-            this.PresetHD6.Name = "PresetHD6";
-            this.PresetHD6.Size = new System.Drawing.Size(51, 23);
-            this.PresetHD6.TabIndex = 2;
-            this.PresetHD6.Text = "HD-6";
-            toolTip1.SetToolTip(this.PresetHD6, "Load default timeouts for a 6ft dome");
-            this.PresetHD6.UseVisualStyleBackColor = true;
-            this.PresetHD6.Click += new System.EventHandler(this.PresetHD6_Click);
-            // 
-            // PresetHD10
-            // 
-            this.PresetHD10.Location = new System.Drawing.Point(118, 71);
-            this.PresetHD10.Name = "PresetHD10";
-            this.PresetHD10.Size = new System.Drawing.Size(51, 23);
-            this.PresetHD10.TabIndex = 2;
-            this.PresetHD10.Text = "HD-10";
-            toolTip1.SetToolTip(this.PresetHD10, "Load default timeouts for a 10ft dome");
-            this.PresetHD10.UseVisualStyleBackColor = true;
-            this.PresetHD10.Click += new System.EventHandler(this.PresetHD10_Click);
-            // 
-            // PresetHD15
-            // 
-            this.PresetHD15.Location = new System.Drawing.Point(175, 71);
-            this.PresetHD15.Name = "PresetHD15";
-            this.PresetHD15.Size = new System.Drawing.Size(51, 23);
-            this.PresetHD15.TabIndex = 2;
-            this.PresetHD15.Text = "HD-15";
-            toolTip1.SetToolTip(this.PresetHD15, "Load default timeouts for a 15ft dome");
-            this.PresetHD15.UseVisualStyleBackColor = true;
-            this.PresetHD15.Click += new System.EventHandler(this.PresetHD15_Click);
-            // 
-            // IgnoreShutterSensor
-            // 
-            this.IgnoreShutterSensor.AutoSize = true;
-            this.IgnoreShutterSensor.Checked = global::TA.DodscottObservatory.Server.Properties.Settings.Default.IgnoreHardwareShutterSensor;
-            this.IgnoreShutterSensor.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::TA.DodscottObservatory.Server.Properties.Settings.Default, "IgnoreHardwareShutterSensor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.IgnoreShutterSensor.Location = new System.Drawing.Point(7, 20);
-            this.IgnoreShutterSensor.Name = "IgnoreShutterSensor";
-            this.IgnoreShutterSensor.Size = new System.Drawing.Size(222, 17);
-            this.IgnoreShutterSensor.TabIndex = 0;
-            this.IgnoreShutterSensor.Text = "Enable shutter position inference heuristic";
-            toolTip1.SetToolTip(this.IgnoreShutterSensor, resources.GetString("IgnoreShutterSensor.ToolTip"));
-            this.IgnoreShutterSensor.UseVisualStyleBackColor = true;
-            this.IgnoreShutterSensor.CheckedChanged += new System.EventHandler(this.IgnoreShutterSensor_CheckedChanged);
-            // 
             // cmdOK
             // 
             this.cmdOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.cmdOK.Location = new System.Drawing.Point(327, 323);
+            this.cmdOK.Location = new System.Drawing.Point(327, 201);
             this.cmdOK.Name = "cmdOK";
             this.cmdOK.Size = new System.Drawing.Size(59, 24);
             this.cmdOK.TabIndex = 0;
@@ -189,7 +135,7 @@ namespace TA.DodscottObservatory.Server
             // 
             this.cmdCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cmdCancel.Location = new System.Drawing.Point(327, 353);
+            this.cmdCancel.Location = new System.Drawing.Point(327, 231);
             this.cmdCancel.Name = "cmdCancel";
             this.cmdCancel.Size = new System.Drawing.Size(59, 25);
             this.cmdCancel.TabIndex = 1;
@@ -214,7 +160,7 @@ namespace TA.DodscottObservatory.Server
             // AboutBox
             // 
             this.AboutBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.AboutBox.Location = new System.Drawing.Point(327, 295);
+            this.AboutBox.Location = new System.Drawing.Point(327, 173);
             this.AboutBox.Name = "AboutBox";
             this.AboutBox.Size = new System.Drawing.Size(59, 23);
             this.AboutBox.TabIndex = 8;
@@ -250,29 +196,16 @@ namespace TA.DodscottObservatory.Server
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.PresetHD15);
-            this.groupBox1.Controls.Add(this.PresetHD10);
-            this.groupBox1.Controls.Add(this.PresetHD6);
             this.groupBox1.Controls.Add(this.FullRotationTimeSeconds);
             this.groupBox1.Controls.Add(this.ShutterOpenCloseTimeSeconds);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 169);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(302, 111);
+            this.groupBox1.Size = new System.Drawing.Size(302, 87);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Timeouts";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Presets";
             // 
             // label2
             // 
@@ -292,24 +225,13 @@ namespace TA.DodscottObservatory.Server
             this.label1.TabIndex = 0;
             this.label1.Text = "Full rotation (seconds)";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.IgnoreShutterSensor);
-            this.groupBox2.Location = new System.Drawing.Point(13, 287);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(302, 100);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Experimental";
-            // 
             // SetupDialogForm
             // 
             this.AcceptButton = this.cmdOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cmdCancel;
-            this.ClientSize = new System.Drawing.Size(398, 390);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(398, 268);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.StartupOptionsGroup);
             this.Controls.Add(this.CommunicationsGroup);
@@ -338,8 +260,6 @@ namespace TA.DodscottObservatory.Server
             this.StartupOptionsGroup.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,12 +280,6 @@ namespace TA.DodscottObservatory.Server
         private System.Windows.Forms.NumericUpDown ShutterOpenCloseTimeSeconds;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button PresetHD15;
-        private System.Windows.Forms.Button PresetHD10;
-        private System.Windows.Forms.Button PresetHD6;
         private System.Windows.Forms.NumericUpDown FullRotationTimeSeconds;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox IgnoreShutterSensor;
         }
 }

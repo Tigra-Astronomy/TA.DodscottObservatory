@@ -75,13 +75,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FakeItEasy">
-      <Version>5.0.1</Version>
+      <Version>5.1.1</Version>
     </PackageReference>
     <PackageReference Include="FakeItEasy.Analyzer.CSharp">
-      <Version>5.0.1</Version>
+      <Version>5.1.1</Version>
     </PackageReference>
     <PackageReference Include="JetBrains.Annotations">
-      <Version>2018.2.1</Version>
+      <Version>2019.1.1</Version>
     </PackageReference>
     <PackageReference Include="Machine.Specifications.Should">
       <Version>0.11.0</Version>

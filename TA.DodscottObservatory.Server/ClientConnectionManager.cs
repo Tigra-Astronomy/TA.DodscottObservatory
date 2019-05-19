@@ -131,6 +131,7 @@ namespace TA.DodscottObservatory.Server
                 CompositionRoot.BeginSessionScope();
                 var controller = CompositionRoot.Kernel.Get<DeviceController>();
                 controllerInstance = new Maybe<DeviceController>(controller);
+
                 }
 
             var instance = controllerInstance.Single();

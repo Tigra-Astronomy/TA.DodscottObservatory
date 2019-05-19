@@ -91,24 +91,8 @@ namespace TA.DodscottObservatory.Server
             ShutterOpenCloseTimeSeconds.Value = 240;
             }
 
-        private void IgnoreShutterSensor_CheckedChanged(object sender, EventArgs e)
-            {
-            if (IgnoreShutterSensor.Checked)
-                {
-                var result = MessageBox.Show(
-                    "This is a potentially unsafe setting.\nPlease be sure you understand the implications\nbefore enabling this!",
-                    "Potentially unsafe configuration", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning,
-                    MessageBoxDefaultButton.Button2);
-                if (result != DialogResult.OK)
-                    IgnoreShutterSensor.Checked = false;
-                }
-
-            SetControlAppearance();
-            }
-
         private void SetControlAppearance()
             {
-            IgnoreShutterSensor.ForeColor = IgnoreShutterSensor.Checked ? Color.DarkRed : DefaultForeColor;
             }
     }
     }

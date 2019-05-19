@@ -71,6 +71,7 @@ namespace TA.DodscottObservatory
         /// <inheritdoc />
         public void CloseShutter()
         {
+            controller.CloseShutter();
         }
 
         /// <inheritdoc />
@@ -81,6 +82,7 @@ namespace TA.DodscottObservatory
         /// <inheritdoc />
         public void OpenShutter()
         {
+            controller.OpenShutter();
         }
 
         /// <inheritdoc />

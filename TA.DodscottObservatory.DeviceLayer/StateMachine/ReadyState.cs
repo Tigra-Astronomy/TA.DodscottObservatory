@@ -8,7 +8,7 @@ using System;
 
 namespace TA.DodscottObservatory.DeviceLayer.StateMachine
     {
-    internal class ReadyState : ControllerStateBase, IControllerState
+        internal class ReadyState : ControllerStateBase, IControllerState
         {
         /// <inheritdoc />
         public ReadyState(ControllerStateMachine machine) : base(machine) { }

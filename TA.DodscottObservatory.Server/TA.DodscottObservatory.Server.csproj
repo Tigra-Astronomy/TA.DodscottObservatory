@@ -35,9 +35,6 @@
     <StartupObject>TA.DodscottObservatory.Server.Server</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLog">
-      <HintPath>..\..\..\..\.nuget\packages\nlog\4.5.9\lib\net45\NLog.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -151,10 +148,10 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="JetBrains.Annotations">
-      <Version>2018.2.1</Version>
+      <Version>2019.1.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SlowCheetah">
-      <Version>3.1.66</Version>
+      <Version>3.2.20</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -162,10 +159,10 @@
       <Version>3.3.4</Version>
     </PackageReference>
     <PackageReference Include="NLog">
-      <Version>4.5.11</Version>
+      <Version>4.6.2</Version>
     </PackageReference>
     <PackageReference Include="PostSharp.Patterns.Threading">
-      <Version>6.1.15</Version>
+      <Version>6.1.18</Version>
     </PackageReference>
     <PackageReference Include="TA.Ascom.ReactiveCommunications">
       <Version>1.2.2</Version>

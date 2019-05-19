@@ -64,6 +64,7 @@
     <Compile Include="Diagnostics.cs" />
     <Compile Include="DomeState.cs" />
     <Compile Include="DomeStateTransaction.cs" />
+    <Compile Include="StateMachine\ControllerStateMachineExtensions.cs" />
     <Compile Include="StateMachine\DomeMovingState.cs" />
     <Compile Include="StateMachine\IControllerState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="PostSharp.Patterns.Model">
-      <Version>6.0.33</Version>
+      <Version>6.1.18</Version>
     </PackageReference>
     <PackageReference Include="TA.Ascom.ReactiveCommunications">
       <Version>1.2.2</Version>
