@@ -469,7 +469,6 @@
             this.Name = "ServerStatusDisplay";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Dodscott Observatory Dome ASCOM Server";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.LocationChanged += new System.EventHandler(this.frmMain_LocationChanged);

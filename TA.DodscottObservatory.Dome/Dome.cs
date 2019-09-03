@@ -77,6 +77,7 @@ namespace TA.DodscottObservatory
         /// <inheritdoc />
         public void FindHome()
         {
+            
         }
 
         /// <inheritdoc />
@@ -103,6 +104,7 @@ namespace TA.DodscottObservatory
         /// <inheritdoc />
         public void SlewToAzimuth(double Azimuth)
         {
+            controller.RotateToAzimuth(Azimuth);
         }
 
         /// <inheritdoc />
